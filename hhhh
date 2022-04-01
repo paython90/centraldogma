@@ -1,0 +1,27 @@
+
+	$(document).ready(function(){
+		if(displayError==true){
+		$('#errorDiv').dialog(
+						{
+							closeOnEscape : false, 
+							resizable: false,
+							modal : true,
+							position : "center",
+							width:'450px',
+							buttons : [ {
+								"class" : 'button orange_btn ok_btn',
+								text : toUnicode("&#1605;&#1608;&#1575;&#1601;&#1602;"),
+								click : function() {
+									write = true;
+									$(this).dialog("close");
+								}
+							} ],
+							open : function(event, ui) {
+								$("#divHolder").css("background-color", "#EEEEEE");
+		
+							}
+						});
+				
+		}
+	});
+	
